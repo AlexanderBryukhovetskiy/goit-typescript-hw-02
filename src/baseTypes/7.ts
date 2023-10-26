@@ -4,12 +4,28 @@
 */
 
 enum Days {
-  Monday = "Weekday",
-  Tuesday = "Weekday",
-  Wednesday = "Weekday",
-  Thursday = "Weekday",
-  Friday = "Weekday",
-  Saturday = "Weekend",
-  Sunday = "Weekend",  
+  Monday,
+  Tuesday,
+  Wednesday,
+  Thursday,
+  Friday,
+  Saturday,
+  Sunday,  
 };
 
+type DaysString = keyof typeof Days;
+
+function isWeekend(day: DaysString) : boolean {
+    
+  if (Days[day] <= Days.Friday) {
+    return false;
+  } else {
+    return true;
+  }
+}
+
+let monday = isWeekend("Monday");
+console.log("Monday is weekend: ", monday);
+
+let sunday = isWeekend("Sunday");
+console.log("Sunday is weekend: ", sunday);
