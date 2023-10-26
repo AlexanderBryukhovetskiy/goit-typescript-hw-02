@@ -29,3 +29,5 @@ console.log("Monday is weekend: ", monday);
 
 let sunday = isWeekend("Sunday");
 console.log("Sunday is weekend: ", sunday);
+
+export {};

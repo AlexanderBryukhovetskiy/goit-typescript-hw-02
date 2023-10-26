@@ -6,5 +6,4 @@ if (typeof some === 'string') {
   str = some;
 };
 
-
 export {};
