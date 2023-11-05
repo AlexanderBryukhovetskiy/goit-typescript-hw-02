@@ -10,7 +10,7 @@ class Component {
 }
 
 class Page extends Component {
-  pageInfo () {
+  pageInfo (): void {
     console.log(this.props.title);
   }
 }
