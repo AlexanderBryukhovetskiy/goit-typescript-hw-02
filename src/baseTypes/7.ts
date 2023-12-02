@@ -17,11 +17,13 @@ type DaysString = keyof typeof Days;
 
 function isWeekend(day: DaysString) : boolean {
     
-  if (Days[day] <= Days.Friday) {
-    return false;
-  } else {
-    return true;
-  }
+  // if (Days[day] <= Days.Friday) {
+  //   return false;
+  // } else {
+  //   return true;
+  // }
+
+  return (Days[day] === Days.Saturday || Days[day] === Days.Sunday)
 }
 
 let monday = isWeekend("Monday");
